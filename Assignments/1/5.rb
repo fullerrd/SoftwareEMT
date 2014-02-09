@@ -1,0 +1,30 @@
+def combine_anagrams(words)
+
+    #sorted_words = words.map{|x| x.chars.sort.join}
+	#words.group_by { |element| element.downcase.chars.sort }.values
+	#x = words.zip(sorted_words)
+	#puts x[0]
+	#counts = Hash.new(0)
+	#sorted_words.each { |name| counts[name] += 1 }
+	groups = words.group_by { |element| element.downcase.chars.sort }.values
+	groups
+end
+
+
+
+groups = combine_anagrams(['cars', 'for', 'potatoes', 'racs', 'four', 'scar', 'creams', 'scream'])
+puts
+puts "Group 1"
+puts groups[0]
+puts
+puts "Group 2"
+puts groups[1]
+puts
+puts "Group 3"
+puts groups[2]
+puts
+puts "Group 4"
+puts groups[3]
+puts
+puts "Group 5"
+puts groups[4]

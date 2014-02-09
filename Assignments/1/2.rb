@@ -1,0 +1,11 @@
+def palindrome?(string)
+	string.downcase!
+	string.gsub!(/(\W|\d)/, "")
+	string2 = string.reverse
+	puts string == string2
+end
+
+palindrome?("A man, a plan, a cat, a ham, a yak, a yam, a hat, a canal-Panama!")
+palindrome?("Amy, must I jujitsu my ma?");
+palindrome?("palindrome");
+palindrome?("white spaces");
